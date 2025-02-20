@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import WebRoutes from './routes/WebRoutes'; // WebRoutes for the website
+import AdminRoutes from './routes/AdminRoutes'; // AdminRoutes for the admin panel
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Admin Routes */}
+        <Route path="/admin/*" element={<AdminRoutes />} /> {/* Corrected path for Admin */}
+
+        {/* Website Routes (default) */}
+        <Route path="/*" element={<WebRoutes />} /> {/* Corrected the path for Web Routes */}
+      </Routes>
+      <ToastContainer/>
+    </Router>
   );
 }
 

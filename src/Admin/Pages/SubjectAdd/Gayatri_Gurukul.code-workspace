@@ -1,0 +1,22 @@
+// {
+// 	"folders": [
+// 		{
+// 			"path": "../../../../.."
+// 		},
+// 		{
+// 			"path": "../../../../../../admin_ggps"
+// 		},
+// 		{
+// 			"path": "../../../../../../Gayatri_backend"
+// 		},
+// 		{
+// 			"path": "../../../../../../c++practice"
+// 		}
+// 	],
+// 	"settings": {
+// 		"liveServer.settings.multiRootWorkspaceName": "admin_ggps",
+// 		"files.associations": {
+// 			"iostream": "cpp"
+// 		}
+// 	}
+// }

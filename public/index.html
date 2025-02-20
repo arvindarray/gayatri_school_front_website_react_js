@@ -1,43 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Gayatri Gurukul Public School" />
+    <meta name="description" content="Gayatri Gurukul Public School - A place for holistic education" />
+    <title>Gayatri Gurukul Public School</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gbb.com/" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Admin Styles -->
+    <link rel="shortcut icon" href="http://localhost:3000/AdminPortal/assets/img/favicon.png"/>
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/css/buttons.dataTables.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/datatables/dataTables.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/css/toastr.min.css"/>
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/multiple_select/fSelect.css"/>
+    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/css/style.css" />
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="main-wrapper">
+      <div id="root">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      </div>
+    </div>
+   
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Bootstrap Bundle (Includes Popper.js) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin Scripts -->
+    <script src="http://localhost:3000/lib/easing/easing.min.js"></script>
+    <script src="http://localhost:3000/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Admin Portal Scripts -->
+    <script src="http://localhost:3000/AdminPortal/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+     <script src="http://localhost:3000/AdminPortal/assets/js/script.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/js/toastr.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/apexchart/apexcharts.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/apexchart/chart-data.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/multiple_select/fSelect.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/js/comman.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/js/form-validation.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/js/moment/moment.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/datatables.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/jszip.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/buttons.print.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="http://localhost:3000/js/main.js"></script>
+
+    <script>
+      const baseUrl = window.REACT_APP_BASE_URL = '%REACT_APP_BASE_URL%';
+         
+      document.querySelectorAll('aaaaa').forEach((element) => {
+          let srcOrHref = element.tagName === 'LINK' ? 'href' : 'src';
+          let url = element.getAttribute(srcOrHref);
+
+          if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+              element.setAttribute(srcOrHref, baseUrl + url);
+          }
+      });
+
+      console.log(" BASE URL  : ",baseUrl)
+
+        let externals_link = [{
+          type:"script",
+          link_load:"src",
+          path:"AdminPortal/assets/js/script.js"
+        },{
+          type:"script",
+          link_load:"src",
+          path:"AdminPortal/assets/js/toastr.min.js"
+        }];
+
+        // externals_link.forEach((element)=>{
+        //   var script = document.createElement('script');
+        //   script[element.link_load]= baseUrl+element.path;
+        //   console.log(" dynamic load script ", script);
+
+        //   document.body.appendChild(script);
+        // });
+
+
+        $(document).ready(function() {
+   
+            var Sidemenu = function() {
+              this.$menuItem = $('#sidebar-menu a');
+            };
+            
+            function init() {
+              var $this = Sidemenu;
+              $('#sidebar-menu a').on('click', function(e) {
+                if($(this).parent().hasClass('submenu')) {
+                  e.preventDefault();
+                }
+                if(!$(this).hasClass('subdrop')) {
+                  $('ul', $(this).parents('ul:first')).slideUp(350);
+                  $('a', $(this).parents('ul:first')).removeClass('subdrop');
+                  $(this).next('ul').slideDown(350);
+                  $(this).addClass('subdrop');
+                } else if($(this).hasClass('subdrop')) {
+                  $(this).removeClass('subdrop');
+                  $(this).next('ul').slideUp(350);
+                }
+              });
+              $('#sidebar-menu ul li.submenu a.active').parents('li:last').children('a:first').addClass('active').trigger('click');
+            }
+            
+            // Sidebar Initiate
+            init();
+
+          });
+
+     
+    </script>
   </body>
 </html>
