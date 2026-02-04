@@ -37,9 +37,9 @@ const Footer = () => {
 
                     <div className="col-lg-4 col-md-12 mb-5">
                         <h5 className="text-primary text-uppercase mb-4" style={{ letterSpacing: '5px' }}>Get In Touch</h5>
-                        <p><i className="fa fa-map-marker-alt mr-2"></i>Saray Kali Das, Mariahu, Jaunpur (U.P)</p>
-                        <p><i className="fa fa-phone-alt mr-2"></i>+9125603155</p>
-                        <p><i className="fa fa-envelope mr-2"></i>gayatriyoga666@gamil.com</p>
+                        <p><i className="fa fa-map-marker-alt mr-2"></i>Saraikalidas, Mariahu, Jaunpur (U.P)</p>
+                        <p><i className="fa fa-phone-alt mr-2"></i>+91 9125603155</p>
+                        <p><i className="fa fa-envelope mr-2"></i>gayatriyoga666@gmail.com</p>
                         <div className="d-flex justify-content-start mt-4">
                             <Link className="btn btn-outline-light btn-square mr-2" to="#" aria-label="Twitter">
                                 <i className="fab fa-twitter"></i>
@@ -62,7 +62,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-lg-12 text-center mb-3 mb-md-0">
                         <p className="m-0 text-white">
-                            Managed by <a href="#">Arvind 91 6387056457</a>
+                            Managed by <a href="#">Arvind +91 6387056457</a>
                         </p>
                     </div>
                 </div>

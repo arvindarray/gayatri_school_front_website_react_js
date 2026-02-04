@@ -20,17 +20,6 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Admin Styles -->
-    <link rel="shortcut icon" href="http://localhost:3000/AdminPortal/assets/img/favicon.png"/>
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/css/buttons.dataTables.min.css" />
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/datatables/dataTables.min.css" />
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/fontawesome/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/plugins/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/css/toastr.min.css"/>
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/multiple_select/fSelect.css"/>
-    <link rel="stylesheet" href="http://localhost:3000/AdminPortal/assets/css/style.css" />
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -42,35 +31,19 @@
    
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 
     <!-- Bootstrap Bundle (Includes Popper.js) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin Scripts -->
-    <script src="http://localhost:3000/lib/easing/easing.min.js"></script>
-    <script src="http://localhost:3000/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-    <!-- Admin Portal Scripts -->
-    <script src="http://localhost:3000/AdminPortal/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-     <script src="http://localhost:3000/AdminPortal/assets/js/script.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/js/toastr.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/apexchart/apexcharts.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/apexchart/chart-data.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/multiple_select/fSelect.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/js/comman.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/js/form-validation.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/js/moment/moment.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/datatables.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/dataTables.buttons.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/jszip.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/buttons.html5.min.js"></script>
-    <script src="http://localhost:3000/AdminPortal/assets/plugins/datatables/buttons.print.min.js"></script>
+   
 
     <!-- Template Javascript -->
-    <script src="http://localhost:3000/js/main.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
       const baseUrl = window.REACT_APP_BASE_URL = '%REACT_APP_BASE_URL%';
@@ -84,7 +57,7 @@
           }
       });
 
-      console.log(" BASE URL  : ",baseUrl)
+      //console.log(" BASE URL  : ",baseUrl)
 
         let externals_link = [{
           type:"script",
@@ -96,45 +69,7 @@
           path:"AdminPortal/assets/js/toastr.min.js"
         }];
 
-        // externals_link.forEach((element)=>{
-        //   var script = document.createElement('script');
-        //   script[element.link_load]= baseUrl+element.path;
-        //   console.log(" dynamic load script ", script);
-
-        //   document.body.appendChild(script);
-        // });
-
-
-        $(document).ready(function() {
-   
-            var Sidemenu = function() {
-              this.$menuItem = $('#sidebar-menu a');
-            };
-            
-            function init() {
-              var $this = Sidemenu;
-              $('#sidebar-menu a').on('click', function(e) {
-                if($(this).parent().hasClass('submenu')) {
-                  e.preventDefault();
-                }
-                if(!$(this).hasClass('subdrop')) {
-                  $('ul', $(this).parents('ul:first')).slideUp(350);
-                  $('a', $(this).parents('ul:first')).removeClass('subdrop');
-                  $(this).next('ul').slideDown(350);
-                  $(this).addClass('subdrop');
-                } else if($(this).hasClass('subdrop')) {
-                  $(this).removeClass('subdrop');
-                  $(this).next('ul').slideUp(350);
-                }
-              });
-              $('#sidebar-menu ul li.submenu a.active').parents('li:last').children('a:first').addClass('active').trigger('click');
-            }
-            
-            // Sidebar Initiate
-            init();
-
-          });
-
+        
      
     </script>
   </body>

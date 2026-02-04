@@ -17,7 +17,7 @@ const Header = () => {
                             <i className="fa fa-2x fa-envelope text-red mr-3"></i>
                             <div className="text-left">
                                 <h6 className="font-weight-semi-bold mb-1">Email Us</h6>
-                                <small>gayatriyoga666@gamil.com</small>
+                                <small>gayatriyoga666@gmail.com</small>
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const Header = () => {
                             <i className="fa fa-2x fa-phone text-red mr-3"></i>
                             <div className="text-left">
                                 <h6 className="font-weight-semi-bold mb-1">Call Us</h6>
-                                <small>+9125603155</small>
+                                <small>+91 9125603155</small>
                             </div>
                         </div>
                     </div>

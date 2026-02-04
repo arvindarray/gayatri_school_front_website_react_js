@@ -45,18 +45,18 @@ const Contact_info = () => {
                                 </span>
                                 <br />
                                 <br />
-                                <b>Address:</b> Saray Kali Das (U.P)
+                                <b>Address:</b> Saraikalidas Mariahu Jaunpur (U.P)
                                 <br />
                                 <br />
-                                <b>Phone:</b> 9125603155
+                                <b>Phone:</b> +91 9125603155
                                 <br />
                                 <br />
-                                <b>E-mail:</b> gayatriyoga666@gamil.com
+                                <b>E-mail:</b> gayatriyoga666@gmail.com
                                 <br />
                                 <br />
                                 <b>Website:</b>{' '}
-                                <a href="http://www.gayatrigurukul.com" className="style8">
-                                    www.gayatrigurukul.com
+                                <a href="http://www.gayatrigurukul.in" className="style8">
+                                    www.gayatrigurukul.in
                                 </a>
                                 <br />
                             </div>
