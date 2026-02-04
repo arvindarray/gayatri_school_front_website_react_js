@@ -559,7 +559,7 @@ const Mandatory_disclosure = () => {
                                             </tr>
                                         </tbody>
                                     </table>
-
+                                  {/* // commiting  */}
 
                                     {/* SARAS LINK */}
                                     <table className="table table-hover table-bordered" width="100%">
