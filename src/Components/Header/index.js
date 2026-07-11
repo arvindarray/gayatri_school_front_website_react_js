@@ -1,51 +1,69 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
     return (
         <div>
-            <div className="container-fluid d-none d-lg-block bg-cyan">
-                <div className="row border-bottom align-items-center py-3 px-xl-5">
+            {/* Top Header (Info Bar) */}
+            <div className="container-fluid d-none d-lg-block top-header">
+                <div className="row align-items-center py-2 px-xl-5">
                     <div className="col-lg-6">
-                        <a href="#" className="text-decoration-none">
-                            <img src="img/name.png" alt="Logo" />
-                        </a>
+                        <Link to="/home" className="top-header-logo-link text-decoration-none">
+                            <img src="img/name.png" alt="Logo" className="img-fluid" style={{ maxHeight: '75px' }} />
+                        </Link>
                     </div>
 
-                    <div className="col-lg-3 text-right">
-                        <div className="d-inline-flex align-items-center">
-                            <i className="fa fa-2x fa-envelope text-red mr-3"></i>
-                            <div className="text-left">
-                                <h6 className="font-weight-semi-bold mb-1">Email Us</h6>
-                                <small>gayatriyoga666@gmail.com</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3 text-right">
-                        <div className="d-inline-flex align-items-center">
-                            <i className="fa fa-2x fa-phone text-red mr-3"></i>
-                            <div className="text-left">
-                                <h6 className="font-weight-semi-bold mb-1">Call Us</h6>
-                                <small>+91 9125603155</small>
-                            </div>
+                    <div className="col-lg-6 text-right">
+                        <div className="contact-items-wrapper">
+                            <a href="mailto:gayatriyoga666@gmail.com" className="contact-item">
+                                <div className="contact-icon-wrapper">
+                                    <i className="fa fa-envelope"></i>
+                                </div>
+                                <div className="contact-text">
+                                    <h6>Email Us</h6>
+                                    <small>gayatriyoga666@gmail.com</small>
+                                </div>
+                            </a>
+                            <a href="tel:+919125603155" className="contact-item">
+                                <div className="contact-icon-wrapper">
+                                    <i className="fa fa-phone"></i>
+                                </div>
+                                <div className="contact-text">
+                                    <h6>Call Us</h6>
+                                    <small>+91 9125603155</small>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container-fluid bg-red">
+            {/* Main Navigation Bar */}
+            <div className="container-fluid main-navbar-container">
                 <div className="row px-xl-5">
                     <div className="col-lg-12">
-                        <nav className="navbar navbar-expand-lg bg-red navbar-light py-3 py-lg-0 px-0">
-                            <a href="#" className="text-decoration-none d-block d-lg-none">
-                                <img src="img/name.png" alt="Logo" width="100%" />
-                            </a>
-                            <button type="button" className="navbar-toggler pt-2" data-toggle="collapse" data-target="#navbarCollapse">
-                                <span className="navbar-toggler-icon"></span>
+                        <nav className="navbar navbar-expand-lg navbar-dark main-navbar py-0 px-0">
+                            <Link to="/home" className="text-decoration-none d-block d-lg-none py-2" style={{ maxWidth: '80%' }}>
+                                <img src="img/name.png" alt="Logo" className="img-fluid" style={{ maxHeight: '50px' }} />
+                            </Link>
+                            <button 
+                                type="button" 
+                                className="navbar-toggler custom-toggler collapsed" 
+                                data-toggle="collapse" 
+                                data-target="#navbarCollapse"
+                                aria-controls="navbarCollapse"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span className="toggler-icon-bar"></span>
+                                <span className="toggler-icon-bar"></span>
+                                <span className="toggler-icon-bar"></span>
                             </button>
                             <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                                 <div className="navbar-nav py-0">
-                                    <Link to="/home" className="nav-item nav-link active">Home</Link>
+                                    <NavLink to="/home" className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}>Home</NavLink>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">About Us</a>
                                         <div className="dropdown-menu rounded-0 m-0">
@@ -57,6 +75,7 @@ const Header = () => {
                                             <Link to="/facilities" className="dropdown-item">Special Features</Link>
                                         </div>
                                     </div>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Academics</a>
                                         <div className="dropdown-menu rounded-0 m-0">
@@ -67,6 +86,7 @@ const Header = () => {
                                             <Link to="/cocurricular" className="dropdown-item">Co-Curricular Activities</Link>
                                         </div>
                                     </div>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">School Campus</a>
                                         <div className="dropdown-menu rounded-0 m-0">
@@ -77,8 +97,10 @@ const Header = () => {
                                             <Link to="/play" className="dropdown-item">Play Ground</Link>
                                         </div>
                                     </div>
-                                    <Link to="/photo_album" className="nav-item nav-link">Photo Gallery</Link>
-                                    <Link to="/down" className="nav-item nav-link">Downloads</Link>
+                                    
+                                    <NavLink to="/photo_album" className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}>Photo Gallery</NavLink>
+                                    <NavLink to="/down" className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}>Downloads</NavLink>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">SXIC Touch</a>
                                         <div className="dropdown-menu rounded-0 m-0">
@@ -88,6 +110,7 @@ const Header = () => {
                                             <Link to="/admin" className="dropdown-item">Admin Login</Link>
                                         </div>
                                     </div>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Contact</a>
                                         <div className="dropdown-menu rounded-0 m-0">
@@ -96,8 +119,8 @@ const Header = () => {
                                         </div>
                                     </div>
 
-                                    <Link to="/M_summary" className="nav-item nav-link">Mandatory Disclosure</Link>
-                                    <Link to="/career" className="nav-item nav-link">Career @ SXIC</Link>
+                                    <NavLink to="/M_summary" className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}>Mandatory Disclosure</NavLink>
+                                    <NavLink to="/career" className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}>Career @ SXIC</NavLink>
                                 </div>
                             </div>
                         </nav>
@@ -109,3 +132,4 @@ const Header = () => {
 };
 
 export default Header;
+

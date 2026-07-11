@@ -1,13 +1,225 @@
+/* Global Styles & Redesign Tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #44425a;
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #fd0648; /* Red Accent */
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d60037;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Page Header Banner Styling */
+.page-header {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  margin-top: -1px;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+  z-index: 1;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-banner-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 12px;
+}
+
+/* Color Accent Utilities */
+.text-cyan-accent {
+  color: #00efff !important;
+}
+
+.text-red-accent {
+  color: #fd0648 !important;
+}
+
+/* Reusable Profile & Description Cards */
+.profile-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 40px;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(253, 6, 72, 0.08);
+}
+
+.profile-image-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 4px solid #fff;
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.profile-image-wrapper:hover {
+  transform: scale(1.02);
+  border-color: #00efff;
+}
+
+.profile-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-text-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.profile-signature {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 15px;
+  margin-top: 25px;
+}
+
+/* Modern Card for Academics/Facilities */
+.premium-content-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.premium-content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 239, 255, 0.08);
+  border-color: rgba(0, 239, 255, 0.3);
+}
+
+/* Custom Timelines & Timeline Cards */
+.timeline-container {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 30px;
+  border-left: 2px solid #00efff;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fd0648;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #fd0648;
+}
+
+/* Tables styling */
+.custom-table-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.custom-table {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 0;
+}
+
+.custom-table th {
+  background-color: #fd0648 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+}
+
+.custom-table td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: #555;
+  font-weight: 500;
+}
+
+.custom-table tr:last-child td {
+  border-bottom: none;
+}
+
+.custom-table tr:nth-child(even) td {
+  background-color: rgba(0, 239, 255, 0.02);
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767.98px) {
+  .page-banner-title {
+    font-size: 2.2rem;
+  }
+  .profile-card {
+    padding: 20px;
+  }
 }

@@ -1,0 +1,341 @@
+/* Custom CSS for Homepage Carousel and About Section */
+
+/* Hero Banner / Carousel styling */
+.hero-carousel-container {
+    margin-bottom: 3rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-carousel-item {
+    height: 70vh;
+    min-height: 480px;
+    background-color: #000;
+    position: relative;
+}
+
+.hero-carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.68;
+    transition: transform 6s ease;
+}
+
+.carousel-item.active .hero-carousel-img {
+    transform: scale(1.08); /* Ken Burns zoom effect */
+}
+
+/* Semi-transparent dark overlay for text readability */
+.hero-carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.caption-content {
+    text-align: center;
+    color: #ffffff;
+    max-width: 850px;
+    padding: 30px;
+}
+
+/* Entrance animations when slide becomes active */
+.carousel-item.active .caption-badge {
+    animation: fadeInDown 0.8s both 0.2s;
+}
+
+.carousel-item.active .caption-title {
+    animation: fadeInUp 0.8s both 0.4s;
+}
+
+.carousel-item.active .caption-text {
+    animation: fadeInUp 0.8s both 0.6s;
+}
+
+.carousel-item.active .caption-btn {
+    animation: fadeInUp 0.8s both 0.8s;
+}
+
+.caption-badge {
+    background-color: #fd0648; /* Red brand accent color */
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px rgba(253, 6, 72, 0.4);
+}
+
+.caption-title {
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #ffffff;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.caption-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Slide indicators styling */
+.hero-carousel-indicators {
+    z-index: 3;
+    bottom: 20px;
+}
+
+.hero-carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.hero-carousel-indicators li.active {
+    width: 32px; /* Active indicator becomes a pill */
+    border-radius: 6px;
+    background-color: #ffc107; /* Yellow theme color */
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.8);
+}
+
+/* Custom premium action button */
+.premium-btn {
+    background-color: #ffc107 !important; /* Main yellow/amber color */
+    border: none !important;
+    color: #111111 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 32px !important;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.premium-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 193, 7, 0.6);
+    background-color: #e0a800 !important;
+    color: #000000 !important;
+}
+
+/* About Us Section Styling */
+.about-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.about-image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 6px solid #fff;
+    outline: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.about-image-container img {
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-image-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(253, 6, 72, 0.15);
+    border-color: #00efff; /* Cyan brand accent border */
+}
+
+.about-image-container:hover img {
+    transform: scale(1.04);
+}
+
+.about-sub-header {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #fd0648 !important; /* Brand red accent */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.about-sub-header::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 3px;
+    background-color: #00efff;
+    margin-left: 12px;
+    vertical-align: middle;
+}
+
+.about-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.about-para {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #5a5a6a;
+    margin-bottom: 30px;
+}
+
+/* Feature Grid with Badges */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 35px;
+}
+
+.feature-badge-card {
+    background: #f8fafc;
+    border: 1px solid rgba(0, 239, 255, 0.12);
+    padding: 14px 18px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.feature-badge-card:hover {
+    background: #ffffff;
+    border-color: #fd0648;
+    box-shadow: 0 8px 20px rgba(253, 6, 72, 0.08);
+    transform: translateY(-3px);
+}
+
+.feature-icon-wrapper {
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 239, 255, 0.1);
+    color: #008fa8; /* Accessible cyan contrast */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 14px;
+    transition: all 0.3s ease;
+}
+
+.feature-badge-card:hover .feature-icon-wrapper {
+    background: #fd0648;
+    color: #ffffff;
+}
+
+.feature-title {
+    font-size: 0.92rem;
+    font-weight: 750;
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 991.98px) {
+    .hero-carousel-item {
+        height: 60vh;
+        min-height: 400px;
+    }
+    .caption-title {
+        font-size: 2.8rem;
+    }
+    .about-title {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-carousel-item {
+        height: 50vh;
+        min-height: 350px;
+    }
+    .caption-badge {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    .caption-title {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+    .caption-text {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    .premium-btn {
+        padding: 10px 24px !important;
+        font-size: 0.85rem;
+    }
+    .about-title {
+        font-size: 1.8rem;
+    }
+    .about-features-grid {
+        grid-template-columns: 1fr;
+    }
+}

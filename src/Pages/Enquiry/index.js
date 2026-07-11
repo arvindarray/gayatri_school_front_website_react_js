@@ -1,130 +1,149 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Enquiry = () => {
-    // State hooks for form input values
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [mobile, setMobile] = useState('');
-    const [query, setQuery] = useState('');
-    const [detail, setDetail] = useState('');
+  // State hooks for form input values
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [query, setQuery] = useState('');
+  const [detail, setDetail] = useState('');
 
-    // Form submission handler
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add your submit logic here
-        console.log({ name, email, mobile, query, detail });
-    };
+  // Form submission handler
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ name, email, mobile, query, detail });
+    alert('Thank you for your enquiry. We will get back to you soon.');
+    setName('');
+    setEmail('');
+    setMobile('');
+    setQuery('');
+    setDetail('');
+  };
 
-    return (
-        <div>
-            <div className="container-fluid page-header">
-                <div className="container">
-                    <div className="d-flex flex-column justify-content-center" style={{ minHeight: '400px' }}>
-                        {/* You can add additional content or styling here */}
-                    </div>
-                </div>
+  return (
+    <div className="animate-fade-in">
+      {/* Page Header Banner */}
+      <div className="container-fluid page-header py-5 mb-5">
+        <div className="container py-5">
+          <div className="d-flex flex-column align-items-center justify-content-center" style={{ minHeight: "300px" }}>
+            <h1 className="display-4 text-white text-uppercase font-weight-bold text-center page-banner-title">Send Enquiry</h1>
+            <div className="d-inline-flex text-white">
+              <p className="m-0 text-uppercase"><Link className="text-white" to="/home">Home</Link></p>
+              <p className="m-0 px-2">/</p>
+              <p className="m-0 text-uppercase text-cyan-accent">Enquiry</p>
             </div>
-            <div className="container-fluid py-5">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="mas_h">Send Enquiry</div>
-                            <br />
-                            <div className="style4">
-                                <form onSubmit={handleSubmit}>
-                                    <table className="style1">
-                                        <tbody>
-                                            <tr>
-                                                <td colSpan="2" className="style32">
-                                                    <span className="style33">
-                                                        <strong>Please post your quick enquiry related to any question. We will reply as soon as possible.</strong>
-                                                    </span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style49">Name:</td>
-                                                <td className="style44">
-                                                    <input
-                                                        type="text"
-                                                        id="ContentPlaceHolder1_txtname"
-                                                        style={{ width: '150px' }}
-                                                        value={name}
-                                                        onChange={(e) => setName(e.target.value)}
-                                                        required
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style45">Email:</td>
-                                                <td className="style46">
-                                                    <input
-                                                        type="email"
-                                                        id="ContentPlaceHolder1_txtemail"
-                                                        style={{ width: '150px' }}
-                                                        value={email}
-                                                        onChange={(e) => setEmail(e.target.value)}
-                                                        required
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style45">Mobile No:</td>
-                                                <td className="style46">
-                                                    <input
-                                                        type="text"
-                                                        id="ContentPlaceHolder1_txtmob"
-                                                        style={{ width: '150px' }}
-                                                        value={mobile}
-                                                        onChange={(e) => setMobile(e.target.value)}
-                                                        required
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style47">Question Related To:</td>
-                                                <td className="style48">
-                                                    <input
-                                                        type="text"
-                                                        id="ContentPlaceHolder1_txtquery"
-                                                        style={{ width: '150px' }}
-                                                        value={query}
-                                                        onChange={(e) => setQuery(e.target.value)}
-                                                        required
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style50">Detail:</td>
-                                                <td>
-                                                    <textarea
-                                                        id="ContentPlaceHolder1_Txtdetail"
-                                                        rows="2"
-                                                        cols="20"
-                                                        style={{ height: '93px', width: '212px' }}
-                                                        value={detail}
-                                                        onChange={(e) => setDetail(e.target.value)}
-                                                        required
-                                                    ></textarea>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td className="style13">&nbsp;</td>
-                                                <td>
-                                                    <button type="submit" style={{ height: '31px', width: '100px' }}>
-                                                        Submit
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    );
+      </div>
+
+      <div className="container-fluid py-5">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <div className="profile-card">
+                <div className="text-center mb-5">
+                  <span className="about-sub-header">Have Questions?</span>
+                  <h2 className="about-title">Quick Enquiry</h2>
+                  <p className="text-muted mt-2">
+                    Please post your quick enquiry related to any question. We will reply as soon as possible.
+                  </p>
+                </div>
+
+                <form onSubmit={handleSubmit} className="px-md-4">
+                  <div className="row">
+                    <div className="col-md-6 mb-3">
+                      <div className="form-group">
+                        <label htmlFor="name" className="font-weight-bold text-dark small mb-1">Full Name</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.1)' }}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6 mb-3">
+                      <div className="form-group">
+                        <label htmlFor="email" className="font-weight-bold text-dark small mb-1">Email Address</label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.1)' }}
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="row">
+                    <div className="col-md-6 mb-3">
+                      <div className="form-group">
+                        <label htmlFor="mobile" className="font-weight-bold text-dark small mb-1">Mobile Number</label>
+                        <input
+                          type="tel"
+                          className="form-control"
+                          id="mobile"
+                          placeholder="Your Mobile"
+                          value={mobile}
+                          onChange={(e) => setMobile(e.target.value)}
+                          style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.1)' }}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6 mb-3">
+                      <div className="form-group">
+                        <label htmlFor="query" className="font-weight-bold text-dark small mb-1">Subject / Question Category</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="query"
+                          placeholder="e.g. Admissions, Fees"
+                          value={query}
+                          onChange={(e) => setQuery(e.target.value)}
+                          style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.1)' }}
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-group mb-4">
+                    <label htmlFor="detail" className="font-weight-bold text-dark small mb-1">Detailed Message</label>
+                    <textarea
+                      className="form-control"
+                      id="detail"
+                      rows="4"
+                      placeholder="Write your query details here..."
+                      value={detail}
+                      onChange={(e) => setDetail(e.target.value)}
+                      style={{ borderRadius: '8px', border: '1px solid rgba(0,0,0,0.1)' }}
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div className="text-center">
+                    <button type="submit" className="premium-btn border-0 py-3 px-5">
+                      Submit Enquiry
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Enquiry;
