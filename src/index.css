@@ -16,13 +16,17 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #fd0648; /* Red Accent */
+  background: #fd0648;
+  /* Red Accent */
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #d60037;
 }
@@ -211,15 +215,29 @@ code {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 767.98px) {
   .page-banner-title {
     font-size: 2.2rem;
   }
+
   .profile-card {
     padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1230px !important;
   }
 }
