@@ -15,7 +15,6 @@ import {
     FaArrowRight,
     FaShieldAlt
 } from 'react-icons/fa';
-import './Slider.css';
 
 const Slider = () => {
     const slides = [

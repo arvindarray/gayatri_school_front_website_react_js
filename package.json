@@ -15,13 +15,14 @@
     "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
     "react-toastify": "^11.0.3",
+    "tailwindcss": "^4.3.2",
     "toastr": "^2.1.4",
     "web-vitals": "^2.1.4",
     "yup": "^1.6.1"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "concurrently \"npx tailwindcss -i ./src/tailwind-input.css -o ./src/index.css --watch\" \"react-scripts start\"",
+    "build": "npx tailwindcss -i ./src/tailwind-input.css -o ./src/index.css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.2",
+    "concurrently": "^9.2.4"
   }
 }

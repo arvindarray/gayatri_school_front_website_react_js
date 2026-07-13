@@ -5,26 +5,26 @@ import About from '../../Pages/About';
 import Vision from '../../Pages/Vision';
 import Manager from '../../Pages/Manager';
 import Principal from '../../Pages/Principal';
-import GeneralInstruction from '../../Pages/General_instruction'; // Fixed camelCase
-import SpecialFeatures from '../../Pages/Special_features'; // Fixed camelCase
-import AcademicSystem from '../../Pages/Academic_system'; // Fixed camelCase
-import AdmissionProcedure from '../../Pages/Admission_procedure'; // Fixed camelCase
-import TransferCertificate from '../../Pages/Transfer_certificate'; // Fixed camelCase
+import GeneralInstruction from '../../Pages/GeneralInstruction'; // Fixed camelCase
+import SpecialFeatures from '../../Pages/SpecialFeatures'; // Fixed camelCase
+import AcademicSystem from '../../Pages/AcademicSystem'; // Fixed camelCase
+import AdmissionProcedure from '../../Pages/AdmissionProcedure'; // Fixed camelCase
+import TransferCertificate from '../../Pages/TransferCertificate'; // Fixed camelCase
 import Curriculum from '../../Pages/Curriculum';
-import CoCurricularActivity from '../../Pages/Co_curriculum_activity'; // Fixed camelCase
+import CoCurricularActivity from '../../Pages/CoCurricularActivity'; // Fixed camelCase
 import Infrastructural from '../../Pages/Infrastructural';
-import Classroom from '../../Pages/Class_room'; // Fixed camelCase
-import SchoolLibrary from '../../Pages/School_library'; // Fixed camelCase
-import SchoolLab from '../../Pages/School_lab'; // Fixed camelCase
-import Playground from '../../Pages/Play_ground'; // Fixed camelCase
-import PhotoAlbum from '../../Pages/Photo_album'; // Fixed camelCase
+import Classroom from '../../Pages/Classroom'; // Fixed camelCase
+import SchoolLibrary from '../../Pages/SchoolLibrary'; // Fixed camelCase
+import SchoolLab from '../../Pages/SchoolLab'; // Fixed camelCase
+import Playground from '../../Pages/Playground'; // Fixed camelCase
+import PhotoAlbum from '../../Pages/PhotoAlbum'; // Fixed camelCase
 import Downloads from '../../Pages/Downloads';
-import RecentActivity from '../../Pages/Recent_activity'; // Fixed camelCase
+import RecentActivity from '../../Pages/RecentActivity'; // Fixed camelCase
 import Career from '../../Pages/Career';
-import AdminLogin from '../../Pages/Admin_login'; // Fixed camelCase
-import ContactInfo from '../../Pages/Contact_info'; // Fixed camelCase
+import AdminLogin from '../../Pages/AdminLogin'; // Fixed camelCase
+import ContactInfo from '../../Pages/ContactInfo'; // Fixed camelCase
 import Enquiry from '../../Pages/Enquiry';
-import MandatoryDisclosure from '../../Pages/Mandatory_disclosure'; // Fixed camelCase
+import MandatoryDisclosure from '../../Pages/MandatoryDisclosure'; // Fixed camelCase
 
 function WebRoutes() {
   return (

@@ -7,9 +7,9 @@ import Login from '../../Admin/Components/Login'; // Login component
 
 // import { config } from '../../Admin/Constant/Constant'; // Config constants
 import Dashboard from '../../Admin/Pages/Dashboard'; // Dashboard component
-import Studentlist from '../../Admin/Pages/Studentlist'; // Student list component
-import Studentadd from '../../Admin/Pages/Studentadd'
-import Studentacademic from '../../Admin/Pages/Studentacademic'
+import Studentlist from '../../Admin/Pages/StudentList'; // Student list component
+import Studentadd from '../../Admin/Pages/StudentAdd'
+import Studentacademic from '../../Admin/Pages/StudentAcademic'
 import StudentfeeTransaction from '../../Admin/Pages/StudentFeeTransaction'
 import SubjectList from '../../Admin/Pages/SubjectList'
 import SubjectAdd from '../../Admin/Pages/SubjectAdd'
