@@ -156,16 +156,6 @@ const Slider = () => {
                                     alt={slide.title}
                                 />
                                 <div className="hero-carousel-overlay"></div>
-                                <div className="hero-carousel-caption">
-                                    <div className="caption-content">
-                                        <span className="caption-badge">{slide.badge}</span>
-                                        <h1 className="caption-title">{slide.title}</h1>
-                                        <p className="caption-text">{slide.text}</p>
-                                        <Link to={slide.buttonLink} className="premium-btn caption-btn">
-                                            {slide.buttonText}
-                                        </Link>
-                                    </div>
-                                </div>
                             </div>
                         ))}
                     </div>
