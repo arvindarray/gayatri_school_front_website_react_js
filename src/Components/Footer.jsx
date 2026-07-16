@@ -47,7 +47,7 @@ const Footer = () => {
                                 <p className="footer-badge-text">Expert Teachers</p>
                             </div>
 
-                            <div className="footer-badge-box">
+                            <div className="footer-badge-box d-none d-md-flex">
                                 <FaAward className="footer-badge-icon" />
                                 <p className="footer-badge-text">Holistic Dev</p>
                             </div>

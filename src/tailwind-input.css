@@ -2428,3 +2428,250 @@ code {
 .navbar-collapse.collapse {
     visibility: visible !important;
 }
+
+/* --- Premium Interactive About Page Styles --- */
+.about-timeline-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  position: relative;
+  overflow-x: auto;
+  gap: 10px;
+}
+
+.about-timeline-tab-btn {
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #888;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  white-space: nowrap;
+}
+
+.about-timeline-tab-btn:hover {
+  color: #fd0648;
+}
+
+.about-timeline-tab-btn.active {
+  color: #fd0648;
+}
+
+.about-timeline-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fd0648;
+  border-radius: 2px;
+}
+
+.about-timeline-content {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  padding: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.4s ease;
+}
+
+.about-faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.about-faq-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  border-color: rgba(253, 6, 72, 0.1);
+}
+
+.about-faq-question-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 20px;
+  font-weight: 650;
+  font-size: 1rem;
+  color: #1a1a2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.about-faq-question-btn:focus {
+  outline: none;
+}
+
+.about-faq-answer {
+  padding: 0 20px 20px 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-image-collage {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.collage-img-main {
+  grid-column: span 2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 4px solid #ffffff;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.collage-img-sub {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border: 3px solid #ffffff;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #fd0648;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 25px rgba(253, 6, 72, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-value-card-premium {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.02);
+  padding: 30px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 100%;
+}
+
+.about-value-card-premium:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.about-value-icon-box {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.about-value-card-premium:hover .about-value-icon-box {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.about-quote-card-premium {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 20px;
+  padding: 40px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.about-quote-icon-large {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 6rem;
+  color: rgba(253, 6, 72, 0.08);
+  pointer-events: none;
+}
+
+/* --- Mobile View Enhancements --- */
+@media (max-width: 767.98px) {
+    /* Remove About School, Our Mission, Our Vision icons and reduce button height/padding */
+    .about-tab-btn-custom svg {
+        display: none !important;
+    }
+    .about-tab-btn-custom {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+        height: auto !important;
+    }
+    .about-tab-buttons {
+        gap: 6px !important;
+    }
+
+    /* Learn More button in middle */
+    .about-learn-more-btn-wrapper {
+        text-align: center !important;
+    }
+
+    /* Hide footer newsletter graphic */
+    .newsletter-graphic-container {
+        display: none !important;
+    }
+
+    /* Reduce spacing below the home page slider */
+    .hero-carousel-container {
+        margin-bottom: 1rem !important;
+    }
+    .about-section {
+        padding-top: 1.5rem !important;
+    }
+
+    /* Center disclosure elements on mobile */
+    .disclosure-badge-wrapper {
+        text-align: center !important;
+    }
+    .disclosure-btn-wrapper {
+        text-align: center !important;
+    }
+
+    /* Center View Photos button on mobile */
+    .album-details .btn-text-link {
+        align-self: center !important;
+    }
+}

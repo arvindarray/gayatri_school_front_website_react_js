@@ -262,7 +262,7 @@ const Slider = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-4">
+                            <div className="mt-4 about-learn-more-btn-wrapper">
                                 <Link to="/about" className="premium-btn">Learn More</Link>
                             </div>
                         </div>
@@ -410,7 +410,9 @@ const Slider = () => {
                                     <div className="showcase-footer-row-modern pt-3 border-top d-flex justify-content-between align-items-center">
                                         <span className="showcase-footer-note-modern">CBSE Affiliated Standard Path</span>
                                         <Link to="/academicsystem" className="premium-btn d-flex align-items-center gap-2">
-                                            View Academic Details <FaArrowRight />
+                                            <span className="d-none d-md-inline">View Academic Details</span>
+                                            <span className="d-inline d-md-none">View</span>
+                                            <FaArrowRight />
                                         </Link>
                                     </div>
                                 </div>
@@ -426,7 +428,9 @@ const Slider = () => {
                     <div className="disclosure-banner-card">
                         <div className="row align-items-center">
                             <div className="col-lg-8 mb-4 mb-lg-0 text-left">
-                                <div className="badge badge-warning text-dark py-2 px-3 mb-3 font-weight-bold">CBSE SARAS 6.0 Compliant</div>
+                                <div className="disclosure-badge-wrapper">
+                                    <div className="badge badge-warning text-dark py-2 px-3 mb-3 font-weight-bold">CBSE SARAS 6.0 Compliant</div>
+                                </div>
                                 <h2 className="disclosure-banner-title">Mandatory Public Disclosure</h2>
                                 <p className="disclosure-banner-desc text-justify">
                                     In compliance with CBSE guidelines, Gayatri Gurukul Public School maintains full transparency. Check out our certified trust renewals, NOC document, RTE recognition certificate, building stability certificates, and fire safety compliance details.
@@ -439,7 +443,7 @@ const Slider = () => {
                                         <strong>Affiliation Status:</strong> Fully Registered (SARAS 6.0)
                                     </div>
                                 </div>
-                                <div className="mt-2">
+                                <div className="mt-2 disclosure-btn-wrapper">
                                     <Link to="/M_summary" className="premium-btn mr-3 mb-2">View Full Disclosures</Link>
                                 </div>
                             </div>
